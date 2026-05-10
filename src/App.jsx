@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AddItem from './pages/AddItem';
 import ItemDetail from './pages/ItemDetail';
+import Dashboard from './pages/Dashboard';
+import GoalManager from './pages/GoalManager';
 
 export default function App() {
   return (
@@ -11,6 +13,12 @@ export default function App() {
       <Routes>
         {/* ホーム（一覧）画面 */}
         <Route path="/" element={<Home />} />
+
+        {/* ダッシュボード画面 */}
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* 備蓄計画画面 */}
+        <Route path="/goals" element={<GoalManager />} />
 
         {/* アイテム新規登録画面 */}
         <Route path="/add" element={<AddItem />} />
